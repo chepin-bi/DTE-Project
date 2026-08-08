@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  dte-core:
+    build: .
+    volumes:
+      - ./python:/workspace/python
+      - ./tests:/workspace/tests
+      - ./lean:/workspace/lean
+      - ./docs:/workspace/docs
+    environment:
+      - PYTHONPATH=/workspace/python
+    command: python tests/test_dte_core.py
+    
+  dte-jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace
+      - ./examples:/workspace/examples
+    environment:
+      - PYTHONPATH=/workspace/python
+    command: >
+      bash -c "pip install jupyter &&
+               jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"
