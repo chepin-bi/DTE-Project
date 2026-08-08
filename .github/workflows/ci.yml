@@ -1,0 +1,73 @@
+name: DTE-Core CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: Install dependencies
+        run: |
+          pip install numpy scipy
+      
+      - name: Run tests
+        run: |
+          PYTHONPATH=python python tests/test_dte_core.py
+      
+      - name: Run benchmark
+        run: |
+          PYTHONPATH=python python -c "from dte_core import DTEBenchmark; DTEBenchmark.run_standard_tests(); DTEBenchmark.print_report(DTEBenchmark.run_standard_tests())"
+
+  test-lean:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Lean 4
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: true
+      
+      - name: Build
+        run: |
+          cd lean
+          lake build
+
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install lint tools
+        run: |
+          pip install flake8 black
+      
+      - name: Lint Python
+        run: |
+          flake8 python/ --max-line-length=120
+      
+      - name: Check formatting
+        run: |
+          black --check python/
