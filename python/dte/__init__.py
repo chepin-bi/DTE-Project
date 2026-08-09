@@ -37,6 +37,7 @@ from .states import StateGenerator
 from .classification import EntanglementClassifier
 from .config import DTEConfig
 from .exceptions import DTEDimensionError, DTEStateError, DTENotPositiveSemidefiniteError
+from .attestation import AttestationAnalyzer, AttestationFace, AttestationStatus
 
 __all__ = [
     "DTECoreEngine",
@@ -48,5 +49,8 @@ __all__ = [
     "DTEDimensionError",
     "DTEStateError",
     "DTENotPositiveSemidefiniteError",
+    "AttestationAnalyzer",
+    "AttestationFace",
+    "AttestationStatus",
     "__version__",
 ]

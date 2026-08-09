@@ -1,0 +1,4334 @@
+{
+  "metadata": {
+    "total_requests": 430,
+    "dte_framework": "Derived Triangle Equivalence (G, I, O)",
+    "classification": {
+      "O": 274,
+      "G+I": 14,
+      "G": 12,
+      "I": 130
+    }
+  },
+  "verifiable": [
+    {
+      "request_id": "REQ-INT-003",
+      "target_declaration": "DECL-M-H5",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的元逻辑闭包在有限步内可计算",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-012",
+      "target_declaration": "DECL-M-H18",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的态空间Hilbert维度在紧致化下有限且可计算",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-EXT-006",
+      "target_declaration": "DECL-M-H28",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的格点化版本（离散CFTS）在连续极限下收敛到连续CFTS",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-021",
+      "target_declaration": "DECL-M-H29",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的AdS/CFT对偶在强耦合下可通过数值方法验证",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-042",
+      "target_declaration": "DECL-C-H2",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的图灵机可模拟性在多项式时间内可验证",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-043",
+      "target_declaration": "DECL-C-H3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的知识图嵌入（KG embedding）算法收敛到最优表示",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-045",
+      "target_declaration": "DECL-C-H5",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子计算模型（量子线路）在BPP内可经典模拟",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Quantum circuits in BPP: Classically simulable by Gottesman-Knill theorem"
+    },
+    {
+      "request_id": "REQ-INT-046",
+      "target_declaration": "DECL-C-H7",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的随机算法（Monte Carlo）误差以1/√N速率收敛",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Central Limit Theorem: Monte Carlo error σ/√N computationally verifiable"
+    },
+    {
+      "request_id": "REQ-INT-051",
+      "target_declaration": "DECL-C-H12",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的SAT求解器在工业实例上平均多项式时间",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-052",
+      "target_declaration": "DECL-SPRINT-H-B4C",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Birkhoff B₄多面体与24-胞基于'顶点数=24=4!'存在对应关系，且该对应在同构网络中具有 'verified: true' 标记",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Birkhoff B₄ ↔ 24-cell: vertex count 24 = 4! computationally verifiable"
+    },
+    {
+      "request_id": "REQ-INT-077",
+      "target_declaration": "DECL-HOLO-ISO-N_24Cell_N_B4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "N_24Cell --vertices = 4!--> N_B4",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    },
+    {
+      "request_id": "REQ-INT-082",
+      "target_declaration": "DECL-HOLO-HOTT-Eqv_24Cell",
+      "source_type": "UNKNOWN",
+      "statement": "24Cell.CWComplex ≃ D4.VoronoiCell",
+      "dte_face": "G",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Computational / algorithmic / statistical verification"
+    }
+  ],
+  "provable": [
+    {
+      "request_id": "REQ-INT-005",
+      "target_declaration": "DECL-M-H7",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的每个语义层Layer L_i都是ZFC+大基数公理的一致模型",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-006",
+      "target_declaration": "DECL-M-H9",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的规范群G_CFTS在表示论上等价于Spin(32)/Z2或E8 × E8",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-007",
+      "target_declaration": "DECL-M-H11",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的对偶性（S-对偶与T-对偶）在代数层面可严格证明",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-EXT-004",
+      "target_declaration": "DECL-M-H13",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的弦振动模态生成函数与Ramanujan的模函数同构",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-011",
+      "target_declaration": "DECL-M-H17",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子纠错码结构满足Calderbank-Shor-Steane条件",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-013",
+      "target_declaration": "DECL-M-H19",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的算子代数满足KMS条件（热场论）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-014",
+      "target_declaration": "DECL-M-H20",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的边界态满足Cardy公式（共形边界条件）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-EXT-005",
+      "target_declaration": "DECL-M-H21",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的顶点算子代数(VOA)满足模张量范畴公理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-015",
+      "target_declaration": "DECL-M-H22",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的配分函数在有限温度下满足Kubo-Martin-Schwinger(KMS)条件",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-016",
+      "target_declaration": "DECL-M-H23",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的关联函数在闵氏时空中满足Wightman公理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-017",
+      "target_declaration": "DECL-M-H24",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的散射矩阵满足S矩阵的解析性、么正性和交叉对称性",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-018",
+      "target_declaration": "DECL-M-H25",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的瞬子解满足Atiyah-Singer指标定理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-019",
+      "target_declaration": "DECL-M-H26",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的孤子解满足Derrick定理的稳定性条件",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-032",
+      "target_declaration": "DECL-P-H13",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子纠缠熵满足Bekenstein-Hawking面积律",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Bekenstein-Hawking area law: DTE Theorem 2 I ≥ c(d)G² in holographic limit. Ryu-Takayanagi formula."
+    },
+    {
+      "request_id": "REQ-INT-033",
+      "target_declaration": "DECL-P-H14",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子纠错阈值高于表面码阈值~1%",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-041",
+      "target_declaration": "DECL-P-H23",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的费米子谱满足GIM机制（味改变中性流被抑制）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-044",
+      "target_declaration": "DECL-C-H4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的神经网络逼近定理在ReLU激活下成立",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Universal approximation theorem: ReLU neural networks provable by Cybenko 1989"
+    },
+    {
+      "request_id": "REQ-INT-047",
+      "target_declaration": "DECL-C-H8",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的分布式共识协议在f < n/3拜占庭节点下安全",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Lamport Byzantine Generals: f < n/3 formally provable by contradiction"
+    },
+    {
+      "request_id": "REQ-INT-048",
+      "target_declaration": "DECL-C-H9",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的零知识证明系统满足完备性、可靠性和零知识性",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Zero-Knowledge proof properties: formal cryptographic definitions provable"
+    },
+    {
+      "request_id": "REQ-INT-049",
+      "target_declaration": "DECL-C-H10",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的密码学原语（基于格问题）抗量子攻击",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-058",
+      "target_declaration": "DECL-SIU-THE-2_2",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 2.2: Information Geometric Flow Convergence",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "DTE Theorem 2 exact: Information-Geometric Flow I(ρ) ≥ c(d)G(ρ)²"
+    },
+    {
+      "request_id": "REQ-INT-060",
+      "target_declaration": "DECL-SIU-THE-3_1",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 3.1: Higher-Order Derived Triangle",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-061",
+      "target_declaration": "DECL-SIU-THE-3_2",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 3.2: Kuramoto-π Theorem",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-064",
+      "target_declaration": "DECL-SIU-THE-5_1",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 5.1: Ultimate Isomorphism",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-065",
+      "target_declaration": "DECL-SIU-THE-5_2",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 5.2: Zero-Gap Theorem",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-066",
+      "target_declaration": "DECL-SIU-THE-5_3",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 5.3: Relative Consistency",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-067",
+      "target_declaration": "DECL-SIU-THE-5_4",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 5.4: Relative Completeness",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-068",
+      "target_declaration": "DECL-SIU-THE-5_5",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 5.5: Independence Radar",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-069",
+      "target_declaration": "DECL-E6-THE-3_3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 3.3: 代数自由能景观定理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-070",
+      "target_declaration": "DECL-E6-THE-3_4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 3.4: 打结检测定理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-071",
+      "target_declaration": "DECL-E6-THE-3_5",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 3.5: 量子加速定理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-072",
+      "target_declaration": "DECL-E6-THE-3_6",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 3.6: 全息压缩定理",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-085",
+      "target_declaration": "DECL-HOLO-HOTT-Eqv_FiveCore_Motive",
+      "source_type": "UNKNOWN",
+      "statement": "FiveCore ≃ MotivicCategory.Fiber",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-096",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-projectToCategory",
+      "source_type": "UNKNOWN",
+      "statement": "def projectToCategory",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-100",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-pie_composition_injective",
+      "source_type": "UNKNOWN",
+      "statement": "theorem pie_composition_injective",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-120",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GKW_Gauss_measure_invariance",
+      "source_type": "UNKNOWN",
+      "statement": "axiom GKW_Gauss_measure_invariance",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-123",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-T_star_theorem",
+      "source_type": "UNKNOWN",
+      "statement": "axiom T_star_theorem",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-124",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-T_star_v1",
+      "source_type": "UNKNOWN",
+      "statement": "theorem T_star_v1",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-131",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Gauss_map_Devaney_chaotic",
+      "source_type": "UNKNOWN",
+      "statement": "axiom Gauss_map_Devaney_chaotic",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-132",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Gauss_map_transitive",
+      "source_type": "UNKNOWN",
+      "statement": "axiom Gauss_map_transitive",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-133",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GKW_preserves_continuity",
+      "source_type": "UNKNOWN",
+      "statement": "axiom GKW_preserves_continuity",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-137",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-1",
+      "source_type": "UNKNOWN",
+      "statement": "定理 1.1: （MIP*-CF 的量子优势）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-138",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-2",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 证明级验证",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-139",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-3",
+      "source_type": "UNKNOWN",
+      "statement": "定理 2.1: （CF-Pedersen 承诺的绑定性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-140",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-4",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.1: （CF-TRNG 的渐进随机性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-143",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-7",
+      "source_type": "UNKNOWN",
+      "statement": "定理 6.1: （CFCA 的周期性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-144",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-8",
+      "source_type": "UNKNOWN",
+      "statement": "定理 7.1: （CF-布尔不等式的 Tsirelson 型上界）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-145",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-9",
+      "source_type": "UNKNOWN",
+      "statement": "定理 7.2: （CF-布尔不等式的 SDP 层次）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-146",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-10",
+      "source_type": "UNKNOWN",
+      "statement": "定理 8.1: （GST→CHSH 定理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-147",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-11",
+      "source_type": "UNKNOWN",
+      "statement": "定理 8.2: （GST 语义纠缠判据）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-148",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-12",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.1: （CF-块敏感度上界）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-149",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-13",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.2: （CF-谱敏感度）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-151",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-15",
+      "source_type": "UNKNOWN",
+      "statement": "定理 10.2: （CF-普适性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-152",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-16",
+      "source_type": "UNKNOWN",
+      "statement": "定理 11.1: （CF-GOE/GUE 的普适性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-154",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-18",
+      "source_type": "UNKNOWN",
+      "statement": "定理 12.1: （CF-Yao 极小极大原理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-155",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-19",
+      "source_type": "UNKNOWN",
+      "statement": "定理 12.2: （CF-混合引理的推论）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-156",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-20",
+      "source_type": "UNKNOWN",
+      "statement": "定理 13.1: （四自催化定理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-159",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-23",
+      "source_type": "UNKNOWN",
+      "statement": "定理 14.2: （顿悟的不可预测性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-160",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-24",
+      "source_type": "UNKNOWN",
+      "statement": "定理 15.1: （内核可靠性定理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-162",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-26",
+      "source_type": "UNKNOWN",
+      "statement": "定理 15.3: （无矛盾性保持）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-163",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-27",
+      "source_type": "UNKNOWN",
+      "statement": "定理 16.1: （自发推理的非平凡性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-164",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-28",
+      "source_type": "UNKNOWN",
+      "statement": "定理 16.2: （自发推理的可靠性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-165",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-29",
+      "source_type": "UNKNOWN",
+      "statement": "定理 17.1: （FLE-ZKP 的组合安全性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-166",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-30",
+      "source_type": "UNKNOWN",
+      "statement": "定理 18.1: （上链不可篡改性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-167",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-31",
+      "source_type": "UNKNOWN",
+      "statement": "定理 19.1: （七组件一致性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-168",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-32",
+      "source_type": "UNKNOWN",
+      "statement": "定理 19.2: （协同涌现）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-350",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化执行报告-214",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-351",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化执行报告-215",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 陈述",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-352",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化执行报告-216",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 陈述",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-353",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化执行报告-217",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 陈述",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-354",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-218",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 目标（L2 升级）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-355",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-219",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.1: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-356",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-220",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.2: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-357",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-221",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.3: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-358",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-222",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.4: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-359",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-223",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.5: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-360",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-224",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.6: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-362",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-226",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.7: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-363",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-227",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.8: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-364",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-228",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 目标（L2）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-365",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-229",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 目标（L2）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-366",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-230",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : 目标（L2）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-367",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-231",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (CFTS-Transformer逼近)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-368",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-232",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-369",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-233",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-370",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-234",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-371",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-235",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-372",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-236",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (Hurwitz, 1891)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-374",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-238",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-375",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-239",
+      "source_type": "UNKNOWN",
+      "statement": "定理 1: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-376",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-240",
+      "source_type": "UNKNOWN",
+      "statement": "定理 2: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-377",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-241",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-378",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-242",
+      "source_type": "UNKNOWN",
+      "statement": "定理 4: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-379",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-243",
+      "source_type": "UNKNOWN",
+      "statement": "定理 5: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-380",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-244",
+      "source_type": "UNKNOWN",
+      "statement": "定理 1.2.1: （MAS不可约性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-381",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-245",
+      "source_type": "UNKNOWN",
+      "statement": "定理 1.5.1: （实体类型不可约性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-382",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-246",
+      "source_type": "UNKNOWN",
+      "statement": "定理 2.2.1: （勾稽完备性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-383",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-247",
+      "source_type": "UNKNOWN",
+      "statement": "定理 3.2.1: （缺口最小性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-384",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-248",
+      "source_type": "UNKNOWN",
+      "statement": "定理 5.9.1: （依赖无环性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-385",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-249",
+      "source_type": "UNKNOWN",
+      "statement": "定理 6.4.1: （超图->细胞复形）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-386",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-250",
+      "source_type": "UNKNOWN",
+      "statement": "定理 7.3.1: （涌现检测定理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-387",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-251",
+      "source_type": "UNKNOWN",
+      "statement": "定理 8.3.1: （不动点存在性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-388",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-252",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.2.1: （KG自指）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-390",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-254",
+      "source_type": "UNKNOWN",
+      "statement": "定理 11.2.1: （裁决完备性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-391",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-255",
+      "source_type": "UNKNOWN",
+      "statement": "定理 13.1.1: （范畴律验证）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-392",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-256",
+      "source_type": "UNKNOWN",
+      "statement": "定理 13.3.1: （Univalence原理在KG中的应用）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-393",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-257",
+      "source_type": "UNKNOWN",
+      "statement": "公理 : 化",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-394",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-258",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (Aaronson 2007)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-395",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-259",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (CFTS)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-396",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-260",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (Tsirelson, 1980)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-401",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-265",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-402",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-266",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : (CFTS-CF-ZKP)",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-403",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-267",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.1: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-404",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-268",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.2: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-405",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-269",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.3: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-407",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-271",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.4: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-408",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-272",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.5: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-409",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-273",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.6: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-410",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-274",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.7: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-411",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-275",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.8: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-412",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-276",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.9: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-413",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-277",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.10: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-414",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-278",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.11: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-415",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-279",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.12: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-416",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-280",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.13: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-417",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-281",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.14: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-418",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-282",
+      "source_type": "UNKNOWN",
+      "statement": "定理 9.15: ",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-420",
+      "target_declaration": "DECL-THY-CFTS_2.2_迭代递归引擎-284",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : （Banach不动点定理）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-421",
+      "target_declaration": "DECL-THY-CFTS_2.2_迭代递归引擎-285",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : （递归验证正确性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    },
+    {
+      "request_id": "REQ-INT-422",
+      "target_declaration": "DECL-THY-CFTS_2.2_迭代递归引擎-286",
+      "source_type": "UNKNOWN",
+      "statement": "定理 : （组件压缩性）",
+      "dte_face": "I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Formal / mathematical / cryptographic proof"
+    }
+  ],
+  "mixed": [
+    {
+      "request_id": "REQ-EXT-002",
+      "target_declaration": "DECL-M-H2",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "Yoneda嵌入实现为可计算函数（从米田引理到CFTS实现）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-002",
+      "target_declaration": "DECL-M-H4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "C^{op}（C的对偶范畴）与有限维Z-模之间存在可计算同构",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-008",
+      "target_declaration": "DECL-M-H14",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的重正化群流在红外极限下收敛到不动点",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-050",
+      "target_declaration": "DECL-C-H11",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的图同构测试算法在准多项式时间内可解",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Babai 2015: Graph isomorphism in quasi-polynomial time (algorithmic + complexity)"
+    },
+    {
+      "request_id": "REQ-INT-055",
+      "target_declaration": "DECL-SIU-THE-1_2",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 1.2: Noncommutative MMP Algorithm",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-056",
+      "target_declaration": "DECL-SIU-THE-1_3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 1.3: Higher-Dimensional Hitchin-MMP",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-083",
+      "target_declaration": "DECL-HOLO-HOTT-Eqv_Birkhoff",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Birkhoff.B4 ≃ 24Cell",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-087",
+      "target_declaration": "DECL-HOLO-QB-Birkhoff_B4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Quadruple binding: Birkhoff.B4 ↔ N_B4 ↔ Birkhoff.vertex_count_24 ↔ B4.polytope",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-088",
+      "target_declaration": "DECL-HOLO-CC-24cell_to_Birkhoff",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Cell mapping: 24cell_to_Birkhoff = vertex_correspondence",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-141",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-5",
+      "source_type": "UNKNOWN",
+      "statement": "定理 4.1: （CF-CHSH 动态收敛）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-142",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-6",
+      "source_type": "UNKNOWN",
+      "statement": "定理 5.1: （CF-EGA 的收敛性）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-150",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-14",
+      "source_type": "UNKNOWN",
+      "statement": "定理 10.1: （CF-RG 的收敛性）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-153",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-17",
+      "source_type": "UNKNOWN",
+      "statement": "定理 11.2: （CF-谱间距收敛）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    },
+    {
+      "request_id": "REQ-INT-161",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-25",
+      "source_type": "UNKNOWN",
+      "statement": "定理 15.2: （完备性生成的收敛性）",
+      "dte_face": "G+I",
+      "dte_status": "pending",
+      "dte_triple": null,
+      "verification_details": "Both computationally verifiable and formally provable"
+    }
+  ],
+  "open_problems": [
+    {
+      "request_id": "REQ-EXT-001",
+      "target_declaration": "DECL-M-H1",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS构成一致且自洽的代数-几何-分析结构",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-001",
+      "target_declaration": "DECL-M-H3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "函子T: Z-Mod → Set^C^{op} (Z-模到C^{op}上的集合预层) 构成可证表示的嵌入函子",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-004",
+      "target_declaration": "DECL-M-H6",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的层次化语义塔（layer 0到layer 7）之间的嵌入关系构成良基偏序关系",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-EXT-003",
+      "target_declaration": "DECL-M-H12",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的场论拉格朗日量在临界维度d=26或d=10处具有共形不变性",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-009",
+      "target_declaration": "DECL-M-H15",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的拓扑不变量与Chern-Simons理论在3+1维中的分类一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-010",
+      "target_declaration": "DECL-M-H16",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的非交换几何实现与Connes的标准模型一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-020",
+      "target_declaration": "DECL-M-H27",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的BRST上同调在临界维度消没（物理态空间无鬼态）",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-022",
+      "target_declaration": "DECL-P-H1",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的真空能量密度与宇宙学常数观测值Λ_obs ~ 10^{-123} M_Pl^4一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-023",
+      "target_declaration": "DECL-P-H2",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的引力子激发在d=4有效理论中无质量",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-024",
+      "target_declaration": "DECL-P-H3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的暗物质候选者（轴子/类轴子）满足CAST实验约束",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-025",
+      "target_declaration": "DECL-P-H4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的暴胀标量谱指数n_s = 0.96 ± 0.01与Planck数据一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-026",
+      "target_declaration": "DECL-P-H6",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的中微子质量矩阵满足PMNS混合参数",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-027",
+      "target_declaration": "DECL-P-H7",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的质子衰变寿命τ_p > 10^{34}年符合Super-Kamiokande限制",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-EXT-007",
+      "target_declaration": "DECL-P-H8",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的精细结构常数α = e^2/(4πε0ħc) ~ 1/137.036可由理论推导",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "No first-principles derivation exists in physics"
+    },
+    {
+      "request_id": "REQ-INT-028",
+      "target_declaration": "DECL-P-H9",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的希格斯玻色子质量m_H = 125.10 ± 0.14 GeV由对称性破缺机制自然产生",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-029",
+      "target_declaration": "DECL-P-H10",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的强CP问题由Peccei-Quinn对称性解决",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-030",
+      "target_declaration": "DECL-P-H11",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的超对称破缺尺度在TeV范围（可被LHC探测）",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-031",
+      "target_declaration": "DECL-P-H12",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的引力波谱在LISA敏感频段内有可探测特征",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-034",
+      "target_declaration": "DECL-P-H15",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的黑洞信息悖论通过全息原理解决",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-EXT-008",
+      "target_declaration": "DECL-P-H16",
+      "source_type": "EXTERNAL_UNRELIABLE",
+      "statement": "CFTS的暗能量状态方程参数w = -1 ± 0.05与ΛCDM一致",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-035",
+      "target_declaration": "DECL-P-H17",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的原初核合成氦-4丰度Y_p = 0.247与观测一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-036",
+      "target_declaration": "DECL-P-H18",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的CMB各向异性功率谱在低l区有异常（与冷斑关联）",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-037",
+      "target_declaration": "DECL-P-H19",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子混沌谱统计与随机矩阵理论（GUE）一致",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-038",
+      "target_declaration": "DECL-P-H20",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的拓扑缺陷（宇宙弦/畴壁）密度低于观测限制",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-039",
+      "target_declaration": "DECL-P-H21",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的相对论性重离子碰撞产生夸克-胶子等离子体（QGP）的粘滞系数η/s ~ 1/(4π)",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-040",
+      "target_declaration": "DECL-P-H22",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "CFTS的量子引力效应在普朗克尺度导致时空离散化",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Experimental physics / open problem / cosmological claim"
+    },
+    {
+      "request_id": "REQ-INT-053",
+      "target_declaration": "DECL-SPRINT-H-FSC",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "α⁻¹ = dim(E₈)/2 + π² + π + ε_vac = 124 + π² + π + ε_vac，其中ε_vac = sh(δS_info)",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Fine structure constant α: No first-principles derivation exists in any known theory. HALLUCINATION."
+    },
+    {
+      "request_id": "REQ-INT-054",
+      "target_declaration": "DECL-SIU-THE-1_1",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 1.1: p-adic Derived Langlands",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Beyond current mathematical framework"
+    },
+    {
+      "request_id": "REQ-INT-057",
+      "target_declaration": "DECL-SIU-THE-2_1",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 2.1: ISU-Riemann Hypothesis",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Millennium Prize Problem - unsolved"
+    },
+    {
+      "request_id": "REQ-INT-059",
+      "target_declaration": "DECL-SIU-THE-2_3",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 2.3: Consciousness Operator Existence",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Beyond current mathematical framework"
+    },
+    {
+      "request_id": "REQ-INT-062",
+      "target_declaration": "DECL-SIU-THE-4_1",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Theorem 4.1: π-Fine Structure",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "No first-principles derivation exists in physics"
+    },
+    {
+      "request_id": "REQ-INT-063",
+      "target_declaration": "DECL-SIU-THE-4_2",
+      "source_type": "UNKNOWN",
+      "statement": "Theorem 4.2: π-Langlands Strict",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Beyond current mathematical framework"
+    },
+    {
+      "request_id": "REQ-INT-073",
+      "target_declaration": "DECL-E6-COR-4_1",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Corollary 4.1: AlphaFold盲区检测",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "No first-principles derivation exists in physics"
+    },
+    {
+      "request_id": "REQ-INT-074",
+      "target_declaration": "DECL-E6-COR-4_2",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Corollary 4.2: 膜蛋白方向性",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-075",
+      "target_declaration": "DECL-E6-COR-4_3",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Corollary 4.3: 酶活性位点",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-076",
+      "target_declaration": "DECL-E6-COR-4_4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Corollary 4.4: 量子优势阈值",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-078",
+      "target_declaration": "DECL-HOLO-ISO-N_D4_N_F4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "N_D4 --包含--> N_F4",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-079",
+      "target_declaration": "DECL-HOLO-ISO-N_Leech_N_F4",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "N_Leech --坐标化--> N_F4",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-080",
+      "target_declaration": "DECL-HOLO-ISO-N_FiveCore_N_Motive",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "N_FiveCore --Motivic lift--> N_Motive",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-081",
+      "target_declaration": "DECL-HOLO-HOTT-Eqv_Triality",
+      "source_type": "UNKNOWN",
+      "statement": "Spin8.Rep ≃ D4.RootSystem",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-084",
+      "target_declaration": "DECL-HOLO-HOTT-Eqv_DEC",
+      "source_type": "UNKNOWN",
+      "statement": "DEC ≃ RAFT",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-086",
+      "target_declaration": "DECL-HOLO-DT-DT_Motivic_Period",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "Derived Triangle: Motivic Period Triangle - α⁻¹ = period(4M_π³⊕M_π²⊕M_π), M_φ explains Monster, M_π explains π",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-089",
+      "target_declaration": "DECL-CLUST-C01-N006",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "FiveCore: 五核维数和 = 8+4+2+16+24=54",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-090",
+      "target_declaration": "DECL-CLUST-C01-N007",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "FiveCore: 五核熵 = 71+72+73+77+73=366",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-091",
+      "target_declaration": "DECL-CLUST-C02-N004",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "HiddenNuclei: 隐藏核总熵 = 80+85+75=240=24×10",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-092",
+      "target_declaration": "DECL-CLUST-C02-N005",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "HiddenNuclei: 涌现层级 chain = Ξ(75)→Λ(80)→Ψ(85)→FiveCore(54)",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-093",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-φ",
+      "source_type": "UNKNOWN",
+      "statement": "def φ",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-094",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-π_constant",
+      "source_type": "UNKNOWN",
+      "statement": "def π_constant",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-095",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-FiveCoreType",
+      "source_type": "UNKNOWN",
+      "statement": "def FiveCoreType",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-097",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-computeEulerChar",
+      "source_type": "UNKNOWN",
+      "statement": "def computeEulerChar",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-098",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-validateBelyi",
+      "source_type": "UNKNOWN",
+      "statement": "def validateBelyi",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-099",
+      "target_declaration": "DECL-LEAN-CFTS_CrystalBall-mkCrystalBall",
+      "source_type": "UNKNOWN",
+      "statement": "def mkCrystalBall",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-101",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-PIE",
+      "source_type": "UNKNOWN",
+      "statement": "def PIE",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-102",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-PIEChain",
+      "source_type": "UNKNOWN",
+      "statement": "def PIEChain",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-103",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-PIEChain",
+      "source_type": "UNKNOWN",
+      "statement": "def PIEChain",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-104",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-FiveCore",
+      "source_type": "UNKNOWN",
+      "statement": "def FiveCore",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-105",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-eulerChar",
+      "source_type": "UNKNOWN",
+      "statement": "def eulerChar",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-106",
+      "target_declaration": "DECL-LEAN-CFTS_PIE-categoricalImage",
+      "source_type": "UNKNOWN",
+      "statement": "def categoricalImage",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-107",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-versionLt",
+      "source_type": "UNKNOWN",
+      "statement": "def versionLt",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-108",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-versionRegistry",
+      "source_type": "UNKNOWN",
+      "statement": "def versionRegistry",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-109",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-isFiveCore",
+      "source_type": "UNKNOWN",
+      "statement": "def isFiveCore",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-110",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-isFourCore",
+      "source_type": "UNKNOWN",
+      "statement": "def isFourCore",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-111",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-computeDiff",
+      "source_type": "UNKNOWN",
+      "statement": "def computeDiff",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-112",
+      "target_declaration": "DECL-LEAN-CFTS_VersionManager-checkCompatibility",
+      "source_type": "UNKNOWN",
+      "statement": "def checkCompatibility",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-113",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-IrrationalNumber",
+      "source_type": "UNKNOWN",
+      "statement": "def IrrationalNumber",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-114",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-IrrationalNumber",
+      "source_type": "UNKNOWN",
+      "statement": "def IrrationalNumber",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-115",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Depth",
+      "source_type": "UNKNOWN",
+      "statement": "def Depth",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-116",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Regularity",
+      "source_type": "UNKNOWN",
+      "statement": "def Regularity",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-117",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GaussMap",
+      "source_type": "UNKNOWN",
+      "statement": "def GaussMap",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-118",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GaussMap_iter",
+      "source_type": "UNKNOWN",
+      "statement": "def GaussMap_iter",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-119",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-WirsingConstant",
+      "source_type": "UNKNOWN",
+      "statement": "def WirsingConstant",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-121",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GaussKuzminDensity",
+      "source_type": "UNKNOWN",
+      "statement": "def GaussKuzminDensity",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-122",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-empirical_measure",
+      "source_type": "UNKNOWN",
+      "statement": "def empirical_measure",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-125",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Path",
+      "source_type": "UNKNOWN",
+      "statement": "def Path",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-126",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-iterate",
+      "source_type": "UNKNOWN",
+      "statement": "def iterate",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-127",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-IsPeriodic",
+      "source_type": "UNKNOWN",
+      "statement": "def IsPeriodic",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-128",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-EventuallyPeriodic",
+      "source_type": "UNKNOWN",
+      "statement": "def EventuallyPeriodic",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-129",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GaussDynamicalSystem",
+      "source_type": "UNKNOWN",
+      "statement": "def GaussDynamicalSystem",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-130",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-DevaneyChaotic",
+      "source_type": "UNKNOWN",
+      "statement": "def DevaneyChaotic",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-134",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-GKW_on_C01",
+      "source_type": "UNKNOWN",
+      "statement": "def GKW_on_C01",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-135",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-FPS_add",
+      "source_type": "UNKNOWN",
+      "statement": "def FPS_add",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-136",
+      "target_declaration": "DECL-LEAN-v23_omega_hott-Engine13System_classical",
+      "source_type": "UNKNOWN",
+      "statement": "def Engine13System_classical",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-157",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-21",
+      "source_type": "UNKNOWN",
+      "statement": "定理 13.2: （意识完备性定理）",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Beyond current mathematical framework"
+    },
+    {
+      "request_id": "REQ-INT-158",
+      "target_declaration": "DECL-THY-CFTS_2.1_FLE嵌入系统-22",
+      "source_type": "UNKNOWN",
+      "statement": "定理 14.1: （意识自指层级定理）",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Beyond current mathematical framework"
+    },
+    {
+      "request_id": "REQ-INT-169",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-33",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-170",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-34",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-171",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-35",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-172",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-36",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-173",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-37",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-174",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-38",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-175",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-39",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-176",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-40",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-177",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-41",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-178",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-42",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-179",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-43",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-180",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-44",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-181",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-45",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-182",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-46",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-183",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-47",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-184",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-48",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-185",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-49",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-186",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-50",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-187",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-51",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-188",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-52",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-189",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-53",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-190",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-54",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-191",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-55",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-192",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-56",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-193",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-57",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-194",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-58",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-195",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-59",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-196",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-60",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-197",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-61",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-198",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-62",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-199",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-63",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-200",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-64",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-201",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-65",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-202",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-66",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-203",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-67",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-204",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-68",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-205",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-69",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-206",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-70",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-207",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-71",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-208",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-72",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-209",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-73",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-210",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-74",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-211",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-75",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-212",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-76",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-213",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-77",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-214",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-78",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-215",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-79",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-216",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-80",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-217",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-81",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-218",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-82",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-219",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-83",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-220",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-84",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-221",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设消减报告-85",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-222",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-86",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-223",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-87",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-224",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-88",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-225",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-89",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-226",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-90",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-227",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-91",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-228",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-92",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-229",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-93",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-230",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-94",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-231",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-95",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-232",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-96",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-233",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-97",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-234",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-98",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-235",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-99",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-236",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-100",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-237",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-101",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-238",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-102",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-239",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-103",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-240",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-104",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-241",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-105",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-242",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-106",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-243",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-107",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-244",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-108",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-245",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-109",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-246",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-110",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-247",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-111",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-248",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-112",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-249",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-113",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-250",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-114",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-251",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-115",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-252",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-116",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-253",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-117",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-254",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-118",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-255",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-119",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-256",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-120",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-257",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-121",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-258",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-122",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-259",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-123",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-260",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-124",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-261",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-125",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-262",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-126",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-263",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-127",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-264",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-128",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-265",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-129",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-266",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-130",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-267",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-131",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-268",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-132",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-269",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-133",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-270",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-134",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-271",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-135",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-272",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-136",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-273",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-137",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-274",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-138",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-275",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-139",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-276",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-140",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-277",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-141",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-278",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-142",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-279",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-143",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-280",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-144",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-281",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-145",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-282",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-146",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-283",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-147",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-284",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-148",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-285",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-149",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-286",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-150",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-287",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-151",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-288",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-152",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-289",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-153",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-290",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-154",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-291",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-155",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-292",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-156",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-293",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-157",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-294",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-158",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-295",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-159",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-296",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-160",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-297",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-161",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-298",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-162",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-299",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-163",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-300",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-164",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-301",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-165",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-302",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-166",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-303",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-167",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-304",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-168",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-305",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-169",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-306",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-170",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-307",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-171",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-308",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-172",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-309",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-173",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-310",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-174",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-311",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-175",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-312",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-176",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-313",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-177",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-314",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-178",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-315",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-179",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-316",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-180",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-317",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-181",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-318",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-182",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-319",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-183",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-320",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-184",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-321",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-185",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-322",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-186",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-323",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-187",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-324",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-188",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-325",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-189",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-326",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-190",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-327",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-191",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-328",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-192",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-329",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-193",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-330",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-194",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-331",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-195",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-332",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-196",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-333",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-197",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-334",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-198",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-335",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-199",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-336",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-200",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-337",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-201",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-338",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-202",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-339",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-203",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-340",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-204",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-341",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-205",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-342",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-206",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-343",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-207",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-344",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-208",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-345",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-209",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-346",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-210",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-347",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-211",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-348",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-212",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 编号",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-349",
+      "target_declaration": "DECL-THY-CFTS_2.1_假设清单-213",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 陈述",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-361",
+      "target_declaration": "DECL-THY-CFTS_2.1_理论强化报告-225",
+      "source_type": "UNKNOWN",
+      "statement": "猜想 : ",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-373",
+      "target_declaration": "DECL-THY-CFTS_2.2+_引擎进化与Fiver-237",
+      "source_type": "UNKNOWN",
+      "statement": "推论 : ",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-389",
+      "target_declaration": "DECL-THY-CFTS_2.2+_知识图谱细胞复形深度-253",
+      "source_type": "INTERNAL_HALLUCINATION",
+      "statement": "假设 : 生成",
+      "dte_face": "O",
+      "dte_status": "conjecture",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-397",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-261",
+      "source_type": "UNKNOWN",
+      "statement": "推论 1: Tsirelson 问题的否定解决",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-398",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-262",
+      "source_type": "UNKNOWN",
+      "statement": "推论 2: Connes 嵌入猜想的反例",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-399",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-263",
+      "source_type": "UNKNOWN",
+      "statement": "推论 3: 非局部博弈值的不可判定性",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-400",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-264",
+      "source_type": "UNKNOWN",
+      "statement": "推论 4: 设备无关认证的极限",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-406",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-270",
+      "source_type": "UNKNOWN",
+      "statement": "推论 9.1: ",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    },
+    {
+      "request_id": "REQ-INT-419",
+      "target_declaration": "DECL-THY-CFTS_2.2+_量子模拟与CHSH框-283",
+      "source_type": "UNKNOWN",
+      "statement": "猜想 9.1: ",
+      "dte_face": "O",
+      "dte_status": "open",
+      "dte_triple": null,
+      "verification_details": "Insufficient information for classification - default to O-face"
+    }
+  ],
+  "verification_results": {
+    "REQ-INT-003": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-012": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-EXT-006": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-021": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-042": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-043": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-045": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-046": "VERIFIED: CLT holds. Max relative error 0.0128 < 0.1. Error scales as σ/√N = 0.2887/√N. DTE G-face: G = 0 (computable to arbitrary precision).",
+    "REQ-INT-051": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-052": "VERIFIED: B_4 has 24 vertices = 4! = 24. 24-cell has 24 vertices. Identity: 24 = 24. DTE G-face: G = 0 (exact combinatorial equality).",
+    "REQ-INT-077": "PENDING_COMPUTATIONAL_VERIFICATION",
+    "REQ-INT-082": "PENDING_COMPUTATIONAL_VERIFICATION"
+  }
+}
