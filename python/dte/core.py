@@ -202,9 +202,9 @@ class DTECoreEngine:
         g = self.G(rho)
         o = self.O(rho)
         diff = abs(g - o)
-        passed = diff < self.tol
+        passed = bool(diff < self.tol)
         logger.debug(f"Theorem 1 verify: |G-O|={diff:.2e}, passed={passed}")
-        return passed, diff
+        return passed, float(diff)
     
     def theorem2_verify(self, rho: np.ndarray) -> Tuple[bool, float]:
         """Verify Theorem 2: I >= c(d) * G^2."""
@@ -214,9 +214,9 @@ class DTECoreEngine:
         
         if t.G > self.tol:
             ratio = t.I / (t.G ** 2)
-            passed = ratio >= c_d - self.tol
+            passed = bool(ratio >= c_d - self.tol)
             logger.debug(f"Theorem 2 verify: I/G^2={ratio:.4f}, c(d)={c_d:.4f}, passed={passed}")
-            return passed, ratio
+            return passed, float(ratio)
         return True, float('inf')
     
     def batch_compute(self, states: list[np.ndarray]) -> list[DTETriple]:

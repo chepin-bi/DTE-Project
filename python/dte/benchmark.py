@@ -47,7 +47,7 @@ def run_benchmark_suite() -> Dict[str, Any]:
     t = engine.triple(sep)
     results["tests"]["separable_22"] = {
         "triple": t.to_dict(),
-        "all_zero": t.G < 1e-10 and t.I < 1e-10 and t.O < 1e-10,
+        "all_zero": bool(t.G < 1e-10 and t.I < 1e-10 and t.O < 1e-10),
     }
     
     # Test 3: Werner states
