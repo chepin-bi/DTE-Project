@@ -28,7 +28,7 @@ theorem Triple.G_eq_O {dA dB : ℕ} {ρ : DensityMatrix (dA * dB)} :
   exact theorem1_G_eq_O ρ
 
 /-- The complete DTE framework in one line. -/
-def DTE fingerprint {dA dB : ℕ} (ρ : DensityMatrix (dA * dB)) :
+def computeFingerprint {dA dB : ℕ} (ρ : DensityMatrix (dA * dB)) :
     ℝ × ℝ × ℝ × EntanglementType :=
   let t := Triple ρ
   let cls := classify ρ

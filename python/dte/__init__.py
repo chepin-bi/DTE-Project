@@ -32,16 +32,21 @@ __email__ = "chepin@163.com"
 __license__ = "MIT"
 __url__ = "https://github.com/chepin-ai/DTE-Project"
 
-from .core import DTECoreEngine, DTETriple
+from .core import DTECoreEngine, DTETriple, EntanglementType
 from .states import StateGenerator
 from .classification import EntanglementClassifier
 from .config import DTEConfig
+from .exceptions import DTEDimensionError, DTEStateError, DTENotPositiveSemidefiniteError
 
 __all__ = [
     "DTECoreEngine",
     "DTETriple",
+    "EntanglementType",
     "StateGenerator",
     "EntanglementClassifier",
     "DTEConfig",
+    "DTEDimensionError",
+    "DTEStateError",
+    "DTENotPositiveSemidefiniteError",
     "__version__",
 ]

@@ -1,0 +1,32 @@
+# Core dependencies
+numpy>=1.20.0
+scipy>=1.7.0
+
+# Visualization (optional)
+matplotlib>=3.5
+
+# Web API (optional)
+fastapi>=0.100
+uvicorn>=0.23
+pydantic>=2.0
+
+# Neuroscience (optional)
+mne>=1.4
+nibabel>=4.0
+scikit-learn>=1.2
+
+# Finance (optional)
+pandas>=1.5
+yfinance>=0.2
+
+# Development
+pytest>=7.0
+pytest-cov>=4.0
+black>=22.0
+flake8>=4.0
+isort>=5.0
+mypy>=1.0
+pre-commit>=3.0
+
+# Config
+pyyaml>=6.0

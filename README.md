@@ -1,6 +1,6 @@
 # DTE-SIUπ-AX: Derived Triangle Equivalence Unified Framework
 
-[![Tests](https://img.shields.io/badge/tests-28%2F28%20passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-39%2F39%20passing-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.8+-blue)]()
 [![Lean](https://img.shields.io/badge/lean-4.x-purple)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()

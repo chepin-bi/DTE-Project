@@ -11,7 +11,7 @@ import DTE.DensityMatrix
 
 namespace DTE
 
-open Matrix Complex Real BigOperations
+open Matrix Complex Real BigOperators
 
 -- ============================================================
 -- 1. von Neumann Entropy
