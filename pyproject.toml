@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dte-core"
-version = "2.0.0"
-description = "Derived Triangle Equivalence (DTE) unified framework for quantum entanglement analysis"
+version = "3.0.0"
+description = "DTE-SIUπ-AX: Derived Triangle Equivalence unified framework for quantum entanglement, holography, and beyond"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -17,7 +17,9 @@ keywords = [
     "category-theory",
     "holography",
     "quantum-computing",
-    "lean4"
+    "lean4",
+    "neuroscience",
+    "game-theory"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -47,6 +49,16 @@ dev = [
     "flake8>=4.0",
     "black>=22.0",
     "mypy>=1.0",
+    "isort>=5.0",
+    "pre-commit>=3.0",
+]
+viz = [
+    "matplotlib>=3.5",
+]
+api = [
+    "fastapi>=0.100",
+    "uvicorn>=0.23",
+    "pydantic>=2.0",
 ]
 neuro = [
     "mne>=1.4",
@@ -58,8 +70,11 @@ finance = [
     "yfinance>=0.2",
 ]
 all = [
-    "dte-core[dev,neuro,finance]"
+    "dte-core[dev,viz,api,neuro,finance]"
 ]
+
+[project.scripts]
+dte = "dte.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/chepin-ai/DTE-Project"
@@ -74,7 +89,34 @@ where = ["python"]
 line-length = 100
 target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
 
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["python"]
-addopts = "-v --tb=short"
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["python/dte"]
+omit = ["*/tests/*", "*/test_*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

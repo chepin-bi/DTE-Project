@@ -1,138 +1,180 @@
 # DTE-SIUπ-AX: Derived Triangle Equivalence Unified Framework
 
-[![Tests](https://img.shields.io/badge/tests-6%2F6%20passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-28%2F28%20passing-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.8+-blue)]()
 [![Lean](https://img.shields.io/badge/lean-4.x-purple)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
+[![PyPI](https://img.shields.io/badge/pypi-dte--core-blue)]()
 
-> **A computable, strict, and complete implementation of the DTE-SIUπ-AX framework for quantum entanglement analysis.**
+> **A computable, strict, and complete implementation of the DTE-SIUπ-AX framework for quantum entanglement analysis, holography, neuroscience, and beyond.**
 
 ## Overview
 
-The Derived Triangle Equivalence (DTE) framework unifies quantum entanglement analysis through a **triple invariant** (G, I, O) corresponding to geometric, information-theoretic, and open-system aspects. This repository provides:
+The Derived Triangle Equivalence (DTE) framework unifies quantum entanglement analysis through a **triple invariant** (G, I, O):
 
-- **Python Engine**: Production-ready DTE computation with full test coverage
-- **Lean 4 Formalization**: Mathematical rigor with theorem statements
-- **Cross-Paradigm Analysis**: Connections to 7 major mathematical frameworks
-- **AI Integration**: APIs for automated proof and analysis
+| Face | Symbol | Formula | Physical Meaning |
+|------|--------|---------|-----------------|
+| **Geometric** | G | (||ρ^T_A||₁ - 1)/2 | Negativity = Ext¹ |
+| **Information** | I | S(ρ_A) + S(ρ_B) - S(ρ) | Mutual Information |
+| **Open** | O | Σ_{λ_i<0}\|λ_i\| | Boundary Obstruction |
 
-## Core Theorems
+**Theorem 1**: G = O exactly (all dimensions)
+**Theorem 2**: I ≥ c(d)·G² where c(d) = 8log₂d/(d-1)²
+**Theorem 3**: G=I=O=0 ⟺ separable (2×2, 2×3)
+**Theorem 4**: PPT-bound entangled exists (d≥3)
 
-| Theorem | Statement | Status |
-|---------|-----------|--------|
-| **Theorem 1** | G(ρ) = O(ρ) exactly (all dimensions) | ✅ Proven + Verified |
-| **Theorem 2** | I(ρ) ≥ c(d)·G(ρ)², c(d) = 8log₂d/(d-1)² | ✅ Proven (2×2) + Verified |
-| **Theorem 3** | G=I=O=0 ⟺ separable (2×2, 2×3) | ✅ Proven + Verified |
-| **Theorem 4** | PPT-bound entangled exists (d≥3) | ✅ Verified numerically |
+## Installation
+
+```bash
+pip install dte-core
+```
+
+With extras:
+```bash
+pip install dte-core[viz]      # matplotlib visualizations
+pip install dte-core[api]      # FastAPI web service
+pip install dte-core[dev]      # pytest, black, mypy
+pip install dte-core[all]      # everything
+```
 
 ## Quick Start
 
-### Python
+### Python API
 
 ```python
-from dte_core import DTECoreEngine, StateGenerator
+from dte import DTECoreEngine, StateGenerator, EntanglementClassifier
 
-# Initialize engine for 2x2 system
+# Initialize engine
 engine = DTECoreEngine(dim_a=2, dim_b=2)
 
-# Compute DTE triple for a Bell state
+# Analyze a Bell state
 rho = StateGenerator.bell_state()
 triple = engine.triple(rho)
+print(triple)
+# DTETriple(G=0.500000, I=2.000000, O=0.500000)
 
-print(f"G = {triple.G:.6f}")  # 0.500000 (Negativity)
-print(f"I = {triple.I:.6f}")  # 2.000000 (Mutual Information)
-print(f"O = {triple.O:.6f}")  # 0.500000 (Boundary Obstruction)
-
-# Classification
-print(triple.classify(dims=(2,2)).value)  # "NPT ENTANGLED"
+# Classify with confidence
+classifier = EntanglementClassifier(2, 2)
+result = classifier.classify(rho)
+print(result.entanglement_type)  # NPT ENTANGLED
+print(f"Confidence: {result.confidence:.1%}")
 ```
 
-### Running Tests
+### CLI
 
 ```bash
-cd DTE-Project
-PYTHONPATH=python python tests/test_dte_core.py
+# Analyze standard states
+dte analyze --state bell --dims 2 2 --json
+dte analyze --state werner --param 0.5 --dims 3 3
+
+# Run benchmarks
+dte benchmark --format json --output report.json
+
+# Generate visualizations
+dte viz --type werner --dims 2 --output phase.png
+dte viz --type fingerprint --output fingerprint.png
+
+# Classify from file
+dte classify --file state.npy --dims 3 3 --json
 ```
 
-**Output:**
+### Web API
+
+```bash
+pip install dte-core[api]
+uvicorn dte.api:app --host 0.0.0.0 --port 8080
 ```
-======================================================================
-DTE-Core Test Suite v2.0
-======================================================================
 
-[Test] Theorem 1: G = O (exact equality)
---------------------------------------------------
-  Bell (2x2)                | G=0.500000 | O=0.500000 | diff=1.11e-16 | PASS
-  ...
-  Result: ALL PASS
+Then visit `http://localhost:8080/docs` for interactive API documentation.
 
-[Test] Theorem 2: I >= c(d) * G^2
---------------------------------------------------
-  2x2: min(I/G^2) = 8.0348 >= c(2) = 8.0000 | PASS
-  3x3: min(I/G^2) = 3.4813 >= c(3) = 3.1699 | PASS
-  Result: ALL PASS
+## Architecture
 
-...
-Total: 6/6 tests passed
+```
+dte/
+├── core.py           # DTECoreEngine, DTETriple, EntanglementType
+├── states.py         # StateGenerator (Bell, Werner, GHZ, W, etc.)
+├── classification.py # EntanglementClassifier with confidence scoring
+├── io.py             # Import/export (Qiskit, QuTiP, JSON, YAML, NumPy)
+├── viz.py            # 3D fingerprint, evolution plots, phase diagrams
+├── cli.py            # Command-line interface
+├── api.py            # FastAPI REST service
+├── config.py         # DTEConfig (YAML, JSON, env vars)
+├── benchmark.py      # Performance and correctness benchmarks
+├── utils.py          # Validation, Schmidt decomposition, fidelity
+├── exceptions.py     # Structured exception hierarchy
+└── logging_config.py # Structured logging setup
 ```
 
 ## Project Structure
 
 ```
 DTE-Project/
-├── python/
-│   └── dte_core.py          # Core engine + benchmarks
-├── lean/
-│   └── DTE/
-│       └── Core.lean        # Lean 4 formalization
-├── tests/
-│   └── test_dte_core.py     # Comprehensive test suite
-├── docs/
-│   └── theorem2_proof.tex   # LaTeX proof (DeepSeek generated)
-├── formal/
-│   └── DTE_Paper_Framework.md  # Full paper structure
-└── examples/                 # Usage examples
+├── python/dte/           # Main Python package
+├── tests/                # pytest test suite
+├── lean/DTE/             # Lean 4 formalization
+├── docs/                 # Theory docs, paradigm analysis, roadmaps
+├── formal/               # LaTeX paper
+├── examples/             # Usage examples
+├── .github/workflows/    # CI/CD (Python + Lean 4)
+├── Dockerfile            # Container image
+└── docker-compose.yml    # Full stack deployment
 ```
 
 ## Cross-Paradigm Isomorphisms
 
-DTE's triadic structure (G ≃ I ≃ O) appears across mathematics:
+DTE's triadic structure appears across mathematics and physics:
 
-| Paradigm | G (Geometry) | I (Information) | O (Open) | Status |
-|----------|-------------|-----------------|----------|--------|
-| Atiyah-Singer (1963) | ch(E) | Index(D) | [E] ∈ K(X) | Proven |
-| Mirror Symmetry | Dᵇ(Coh X) | Fukaya(Xᵛ) | SYZ | Proven |
-| Langlands | Bun_G(X) | LocSys | Hecke | Function field |
-| Factorization Homology | Eₙ-algebra | ∫_M A | TQFT | Proven |
-| Cat. Quantum Mechanics | Hilbert space | String diagrams | Channel | Proven |
-| Comp. Game Theory | Strategy space | Nash equilibrium | Open games | Proven |
-| **DTE (This Work)** | **Ext¹ = N(ρ)** | **I(A:B)** | **Σ\|λ₋\|** | **Partial** |
+| Paradigm | G (Geometry) | I (Information) | O (Open) |
+|----------|-------------|-----------------|----------|
+| Atiyah-Singer | ch(E) | Index(D) | [E] ∈ K(X) |
+| Mirror Symmetry | Dᵇ(Coh X) | Fukaya(Xᵛ) | SYZ |
+| Langlands | Bun_G(X) | LocSys | Hecke |
+| Factorization Homology | Eₙ-algebra | ∫_M A | TQFT |
+| Cat. Quantum Mechanics | Hilbert space | String diagrams | Channel |
+| Comp. Game Theory | Strategy space | Nash equilibrium | Open games |
+| **DTE (This Work)** | **Ext¹ = N(ρ)** | **I(A:B)** | **Σ\|λ₋\|** |
+| Holography | Area(γ_A)/4G_N | S_CFT(ρ) | Entanglement wedge |
+| IIT (Consciousness) | Cause-effect | Φ (phi) | Exclusion |
+| Economics | Market concentration | Info coupling | Barriers |
 
-## API Keys Configuration
+## Development
 
-Create `.env` file:
 ```bash
-DEEPSEEK_API_KEY=sk-...
-GITHUB_TOKEN=ghp_...
-KIMI_API_KEY=sk-...
+git clone https://github.com/chepin-ai/DTE-Project.git
+cd DTE-Project
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/ -v
+
+# Run benchmarks
+python -m dte.cli benchmark
+
+# Code quality
+black python/
+flake8 python/
+mypy python/dte/
+
+# Build Lean
+cd lean && lake build
+```
+
+## Docker
+
+```bash
+docker-compose up dte-core      # Run tests
+docker-compose up dte-jupyter  # Launch Jupyter notebook
 ```
 
 ## Roadmap
 
-### Completed (P0)
-- ✅ Theorem 2 strict proof (DeepSeek API)
-- ✅ GitHub repository search
-- ✅ Lean 4 theorem framework
-
-### In Progress (P1)
-- 🔄 DTE-Bures distance numerical validation
-- 🔄 OpenNeuro fMRI data integration
-- 🔄 DTE-Unified Validator v2.0 package
-
-### Planned (P2)
-- 📋 LeanMarathon full formalization ($257)
-- 📋 arXiv paper submission
-- 📋 Quantum gravity applications
+| Phase | Status | Description |
+|-------|--------|-------------|
+| P0 | ✅ Complete | Core theorems, numerical verification |
+| P1 | ✅ Complete | Open problems #1-#4, Lean framework |
+| P2 | ✅ Complete | Cross-domain docs, holography, neuroscience, economics |
+| P3 | 🔄 Current | **Lean proof completion, arXiv submission, PyPI release** |
+| P4 | 📋 Planned | Infinite dimensions, quantum algorithms, experimental validation |
 
 ## Citation
 
@@ -141,15 +183,14 @@ KIMI_API_KEY=sk-...
   title={DTE-Generalized: A Unified Triple Framework for Quantum Entanglement},
   author={SAG-ISU-UHODP-DTE Research Group},
   year={2026},
-  url={https://github.com/.../DTE-Project}
+  url={https://github.com/chepin-ai/DTE-Project}
 }
 ```
 
 ## License
 
-MIT License — see LICENSE file.
+MIT License — see [LICENSE](LICENSE).
 
----
-
-**Contact:** chepin@163.com  
-**Last Updated:** 2026-04-20
+**Contact**: chepin@163.com  
+**Version**: 3.0.0  
+**Last Updated**: 2026-08-09
