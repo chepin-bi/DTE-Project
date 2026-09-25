@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "dims": "2x2x2",
+      "passes": 1500,
+      "total": 1500,
+      "rate": 1.0,
+      "max_diff": 6.661338147750939e-16
+    },
+    {
+      "dims": "2x2x3",
+      "passes": 1500,
+      "total": 1500,
+      "rate": 1.0,
+      "max_diff": 6.661338147750939e-16
+    },
+    {
+      "dims": "2x3x3",
+      "passes": 1500,
+      "total": 1500,
+      "rate": 1.0,
+      "max_diff": 6.661338147750939e-16
+    },
+    {
+      "dims": "3x3x3",
+      "passes": 1500,
+      "total": 1500,
+      "rate": 1.0,
+      "max_diff": 7.771561172376096e-16
+    }
+  ],
+  "known_states": {
+    "GHZ": "verified",
+    "W": "verified",
+    "Biseparable": "verified"
+  },
+  "conclusion": "CONJ-01 numerically verified"
+}
