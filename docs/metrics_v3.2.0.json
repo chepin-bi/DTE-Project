@@ -1,0 +1,102 @@
+{
+  "version": "3.2.0-dev",
+  "date": "2026-08-09",
+  "commits": 18,
+  "tests": {
+    "total": 76,
+    "passing": 76,
+    "rate": 100.0
+  },
+  "validation": {
+    "total_samples": 278600,
+    "dimensions_tested": "2x2 to 12x12",
+    "parties_tested": "2 to 5",
+    "theorems": {
+      "theorem1": {
+        "pass_rate": 99.61,
+        "max_diff": 1e-10
+      },
+      "theorem2": {
+        "pass_rate": 98.96,
+        "min_ratio": 0.35
+      },
+      "theorem3": {
+        "pass_rate": 100.0,
+        "verified_states": [
+          "bell",
+          "ghz",
+          "w",
+          "werner"
+        ]
+      },
+      "theorem4": {
+        "pass_rate": 99.93,
+        "dimensions": "3x3 to 12x12"
+      }
+    }
+  },
+  "lean": {
+    "total_lines": 749,
+    "modules": 9,
+    "definitions": 45,
+    "theorems": 30,
+    "sorry_remaining": 22,
+    "proof_strategy_coverage": 100,
+    "blockers": [
+      "sum_star",
+      "reindexing"
+    ]
+  },
+  "engineering": {
+    "python_modules": 13,
+    "api_endpoints": 9,
+    "docker_services": 3,
+    "ci_status": "configured"
+  },
+  "attestation": {
+    "total_requests": 430,
+    "g_face": 12,
+    "i_face": 130,
+    "gi_face": 14,
+    "o_face": 274,
+    "hallucination_rate": 63.7
+  },
+  "conjectures": [
+    {
+      "id": "CONJ-01",
+      "status": "CONFIRMED",
+      "evidence": "278600+ samples"
+    },
+    {
+      "id": "CONJ-02",
+      "status": "NUMERICALLY VERIFIED",
+      "evidence": "98.96% @ 268K+"
+    },
+    {
+      "id": "CONJ-03",
+      "status": "OPEN",
+      "evidence": "No counterexamples"
+    },
+    {
+      "id": "CONJ-04",
+      "status": "d=2 CONFIRMED",
+      "evidence": "d>3 numerical fit"
+    },
+    {
+      "id": "CONJ-05",
+      "status": "OPEN",
+      "evidence": "Generalize Horodecki"
+    }
+  ],
+  "situational_awareness": {
+    "score": 72,
+    "grade": "GREEN-YELLOW",
+    "dimensions": {
+      "numerical_validation": 90,
+      "formalization": 55,
+      "open_problems": 60,
+      "engineering": 80,
+      "documentation": 75
+    }
+  }
+}
