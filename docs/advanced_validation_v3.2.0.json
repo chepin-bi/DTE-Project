@@ -1,0 +1,74 @@
+{
+  "Maximally entangled 2x2": {
+    "G": 0.5,
+    "I": 2.0,
+    "O": 0.5,
+    "diff": 0.0,
+    "separable": false,
+    "dims": "2x2"
+  },
+  "Maximally entangled 3x3": {
+    "G": 1.0000000000000002,
+    "I": 3.169925001442312,
+    "O": 1.0,
+    "diff": 2.220446049250313e-16,
+    "separable": false,
+    "dims": "3x3"
+  },
+  "Maximally entangled 4x4": {
+    "G": 1.5,
+    "I": 4.0,
+    "O": 1.5,
+    "diff": 0.0,
+    "separable": false,
+    "dims": "4x4"
+  },
+  "Werner p=0.0 (separable)": {
+    "G": 0.0,
+    "I": 0.0,
+    "O": 0.0,
+    "diff": 0.0,
+    "separable": true,
+    "dims": "2x2"
+  },
+  "Werner p=0.5 (mixed)": {
+    "G": 0.125,
+    "I": 0.45120505930460153,
+    "O": 0.125,
+    "diff": 0.0,
+    "separable": false,
+    "dims": "2x2"
+  },
+  "Werner p=1.0 (Bell)": {
+    "G": 0.5,
+    "I": 2.0,
+    "O": 0.5,
+    "diff": 0.0,
+    "separable": false,
+    "dims": "2x2"
+  },
+  "Isotropic 3x3": {
+    "G": 0.46666666666666656,
+    "I": 1.16432632419485,
+    "O": 0.4666666666666667,
+    "diff": 1.1102230246251565e-16,
+    "separable": false,
+    "dims": "3x3"
+  },
+  "Random pure 5x5": {
+    "G": 1.42147697589157,
+    "I": 3.4900197907119344,
+    "O": 1.42147697589157,
+    "diff": 0.0,
+    "separable": false,
+    "dims": "5x5"
+  },
+  "Product state": {
+    "G": 0.0,
+    "I": 0.0,
+    "O": 0.0,
+    "diff": 0.0,
+    "separable": true,
+    "dims": "2x2"
+  }
+}
