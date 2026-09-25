@@ -2,25 +2,51 @@ version: '3.8'
 
 services:
   dte-core:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python-base
+    container_name: dte-core
     volumes:
-      - ./python:/workspace/python
-      - ./tests:/workspace/tests
-      - ./lean:/workspace/lean
-      - ./docs:/workspace/docs
+      - ./python/dte:/app/dte
+      - ./tests:/app/tests
+      - ./docs:/app/docs
+    command: python -m pytest tests/ -v
+    
+  dte-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python-base
+    container_name: dte-api
+    ports:
+      - "8080:8080"
+    command: uvicorn dte.api:app --host 0.0.0.0 --port 8080 --reload
     environment:
-      - PYTHONPATH=/workspace/python
-    command: python tests/test_dte_core.py
+      - DTE_ENV=production
+      - DTE_LOG_LEVEL=info
     
   dte-jupyter:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python-base
+    container_name: dte-jupyter
     ports:
       - "8888:8888"
     volumes:
-      - ./:/workspace
-      - ./examples:/workspace/examples
-    environment:
-      - PYTHONPATH=/workspace/python
+      - ./examples:/app/examples
+      - ./docs:/app/docs
     command: >
-      bash -c "pip install jupyter &&
-               jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"
+      bash -c "pip install jupyter && 
+               jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+    
+  dte-lean:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: lean-base
+    container_name: dte-lean
+    volumes:
+      - ./lean:/lean
+    command: lake build

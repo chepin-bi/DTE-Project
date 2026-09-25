@@ -1,12 +1,9 @@
-include LICENSE
 include README.md
-include CONTRIBUTING.md
-include requirements.txt
-recursive-include python/dte *.py
-recursive-include tests *.py
+include LICENSE
+include docs/*.md
+include docs/*.html
+include formal/*.tex
+recursive-include lean *.lean
+recursive-include lean lakefile.toml
 recursive-include examples *.py
-recursive-include lean/DTE *.lean
-include lean/lakefile.lean
-include lean/lean-toolchain
-recursive-include docs *.md
-recursive-include formal *.tex
+recursive-include tests *.py
