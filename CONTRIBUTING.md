@@ -1,82 +1,95 @@
-# Contributing to DTE-Core
+# Contributing to DTE Framework
 
-Thank you for your interest in contributing to the DTE-SIUπ-AX framework!
+Thank you for your interest in contributing to the Derived Triangle Equivalence (DTE) Framework!
 
-## Ways to Contribute
+## Getting Started
 
-### 1. Mathematical Contributions
-- **Theorem Proofs**: Fill `sorry` placeholders in Lean 4 files
-- **Open Problems**: Attack problems listed in `docs/Open_Problems.md`
-- **New Paradigms**: Add cross-paradigm isomorphisms
+### Prerequisites
+- Python 3.8+
+- Lean 4 (for formalization)
+- Git
 
-### 2. Engineering Contributions
-- **Python Engine**: Performance optimizations, new features
-- **Lean Formalization**: Complete proofs, add new theorems
-- **Tests**: Expand test coverage, add property-based tests
-- **Documentation**: Improve clarity, add examples
-
-### 3. Cross-Domain Applications
-- **Quantum Gravity**: Apply DTE to holographic entanglement
-- **Neuroscience**: fMRI/EEG data analysis
-- **Economics**: Game-theoretic applications
-- **AI**: Integration with neural network interpretability
-
-## Development Setup
+### Setup
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/DTE-Project.git
+git clone https://github.com/chepin-ai/DTE-Project.git
 cd DTE-Project
 
-# Python setup
+# Python
 pip install -e ".[dev]"
 
-# Run tests
-PYTHONPATH=python python tests/test_dte_core.py
-
-# Lean setup
+# Lean
 cd lean
 lake build
 ```
 
-## Pull Request Process
+## Development Workflow
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+### Running Tests
 
-## Code Standards
+```bash
+# Python tests
+pytest tests/ -v
+
+# Specific test file
+pytest tests/test_api.py -v
+
+# With coverage
+pytest tests/ --cov=dte --cov-report=html
+```
+
+### Lean Development
+
+```bash
+cd lean
+lake build
+
+# Check sorry count
+grep -r 'sorry' DTE/ | wc -l
+```
+
+## Contribution Areas
+
+### High Priority
+1. **Lean sorry filling**: 22 sorry remain across 6 modules
+   - P1 (6): `DensityMatrix` — partial trace properties
+   - P2 (6): `Negativity`, `Theorem2` — spectral theory
+   - P3-P4 (10): `Classification`, `Attestation`
+2. **Mathlib PRs**: `sum_star`, `reindexing` lemmas
+
+### Medium Priority
+3. **Numerical validation**: Run batch saturation on external compute
+4. **Documentation**: Improve proof strategy documentation
+5. **Performance**: Optimize 10×10+ matrix operations
+
+### Low Priority
+6. **Web interface**: React/Vue frontend for API
+7. **GPU acceleration**: CuPy backend
+8. **Qiskit/QuTiP integration**
+
+## Code Style
 
 ### Python
-- Follow PEP 8 style guide
-- Use type hints where possible
-- Add docstrings for all public functions
-- Maintain test coverage above 90%
+- Follow PEP 8
+- Use type hints
+- Docstrings for all public functions
 
-### Lean 4
-- Use Mathlib conventions
-- Provide proof sketches in comments
-- Mark incomplete proofs with `sorry` and `TODO`
+### Lean
+- Use `by` tactic blocks for complex proofs
+- Comment sorry with proof strategy
+- Reference Mathlib lemmas explicitly
 
-## Open Problem Priority
+## Commit Messages
 
-| Priority | Problem | Status | Difficulty |
-|----------|---------|--------|------------|
-| P0 | Prove c(d) = 8log₂d/(d-1)² | 🔄 DeepSeek proof for d=2 | Medium |
-| P0 | G = O strict proof | ✅ Complete | Low |
-| P1 | PPT-bound entangled search | ✅ Numerical | Medium |
-| P1 | DTE-Bures distance | 🔄 Numerical | High |
-| P2 | Generalize to infinite dim | 📋 Open | Very High |
-| P2 | Quantum gravity coupling | 📋 Open | Very High |
+Use Conventional Commits:
+```
+feat: add new theorem validation
+fix: correct eigenvalue computation
+docs: update proof strategy
+test: add API endpoint tests
+```
 
-## Communication
+## Contact
 
+- Issues: GitHub Issues
 - Email: chepin@163.com
-- Issues: Use GitHub issue templates
-- Discussions: Use GitHub Discussions for questions
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the MIT License.
