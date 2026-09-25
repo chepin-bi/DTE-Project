@@ -4,34 +4,25 @@
 
 ## Purpose
 
-Test if G=O holds for states represented in different measurement bases.
+Test G=O for post-measurement states in different bases.
 
 ## Setup
 
-- Initial state: Bell state |Φ⁺⟩ in computational basis
-- Transform to: X basis, Y basis, Bell basis
+Measure Bell state |Φ⁺⟩ in Z, X, and Y bases.
 
 ## Results
 
-| Basis | G | Diff | Interpretation |
-|-------|---|------|----------------|
-| Computational | 0.500000 | 1.11e-16 | Standard |
-| X | 0.500000 | 3.33e-16 | Entangled |
-| Y | 0.500000 | 3.33e-16 | Entangled |
-| Bell | 0.000000 | 4.60e-34 | Separable (diagonal) |
-
-## Observations
-
-1. **X and Y bases**: G remains 0.5
-   - Bell state is still entangled in these bases
-
-2. **Bell basis**: G becomes 0
-   - State is diagonal in this basis (classically correlated)
-   - This is expected: Bell states are product states in the Bell basis
-
-3. **G=O holds exactly** in all bases
+| Basis | Outcome | G | Diff |
+|-------|---------|---|------|
+| Z | \|0⟩ | 0.0000 | 0.00e+00 |
+| Z | \|1⟩ | 0.0000 | 0.00e+00 |
+| X | + | 0.0000 | 1.06e-16 |
+| X | - | 0.0000 | 1.06e-16 |
+| Y | +i | 0.0000 | 1.42e-16 |
+| Y | -i | 0.0000 | 1.42e-16 |
 
 ## Conclusion
 
-G=O is basis-independent. The equality holds regardless of the measurement
-basis used to represent the state.
+G=O holds for all post-measurement states in Z, X, and Y bases. All
+outcomes produce separable states (G=0), confirming that projective
+measurements destroy entanglement.
