@@ -7,12 +7,19 @@ Re-exports all modules and provides convenient access to core theorems.
 -/
 
 import DTE.Basic
+import DTE.LocalLemmas
 import DTE.DensityMatrix
+import DTE.DensityMatrix_Filled
 import DTE.PartialTranspose
 import DTE.Negativity
+import DTE.Negativity_Filled
 import DTE.Entropy
 import DTE.Theorem2
+import DTE.Theorem2_Filled
 import DTE.Classification
+import DTE.Classification_Filled
+import DTE.Attestation
+import DTE.Attestation_Filled
 
 namespace DTE
 

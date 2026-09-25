@@ -7,7 +7,7 @@ import numpy as np
 
 from .core import DTECoreEngine, DTETriple
 from .states import StateGenerator
-from .classification import EntanglementClassifier
+from .classification import EntanglementClassifier, EntanglementType
 
 app = FastAPI(
     title="DTE Framework API",
@@ -48,7 +48,7 @@ class ClassificationResponse(BaseModel):
 
 @app.get("/")
 def root():
-    return {"message": "DTE Framework v3.2.0", "docs": "/docs"}
+    return {"message": "DTE Framework v3.2.0", "version": "3.2.0", "docs": "/docs"}
 
 
 @app.get("/health")
@@ -134,11 +134,17 @@ def classify_state(req: StateRequest):
         triple = eng.triple(rho)
         result = classifier.classify(rho)
         
+        # Infer NPT and separable from entanglement type
+        etype = result.entanglement_type
+        etype_name = etype.name if hasattr(etype, 'name') else str(etype)
+        is_npt = etype_name in ["ENTANGLED", "NPT"]
+        is_sep = etype_name == "SEPARABLE"
+        
         return ClassificationResponse(
-            entanglement_type=result.entanglement_type.name,
+            entanglement_type=etype.name,
             confidence=float(result.confidence),
-            npt=result.npt,
-            separable=result.separable,
+            npt=is_npt,
+            separable=is_sep,
             g_value=float(triple.G)
         )
     except Exception as e:

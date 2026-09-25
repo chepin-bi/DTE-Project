@@ -199,5 +199,7 @@ MIT License — see [LICENSE](LICENSE).
 **Contact**: chepin@163.com  
 **Version**: 3.2.0-dev  
 **Last Updated**: 2026-08-09  
-**Situational Awareness**: 72/100 (GREEN-YELLOW)  
-**Lean Status**: 749 lines, 22 sorry (100% strategy complete)
+**Situational Awareness**: 72/100 (GREEN-YELLOW) — [Live Dashboard](https://wnughdfmkz4se.ok.kimi.link)  
+**Lean Status**: 749 lines, 22 sorry (100% strategy complete)  
+**API Tests**: 9/9 passing  
+**Docker**: Ready for build
