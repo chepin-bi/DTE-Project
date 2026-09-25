@@ -1,8 +1,8 @@
 # DTE Framework v3.2.0 — Final Status Report
 
 ## Date: 2026-09-26
-## Commits: 181 (both platforms synchronized)
-## Documentation: 140 files
+## Commits: 183 (both platforms synchronized)
+## Documentation: 141 files
 ## Total Validation Samples: ~415,000+
 ## Categories: 75+
 
@@ -31,8 +31,8 @@
 
 | Platform | Commits | Status |
 |----------|---------|--------|
-| Gitee | 181 | ✅ Synchronized |
-| GitHub | 181 | ✅ Synchronized |
+| Gitee | 183 | ✅ Synchronized |
+| GitHub | 183 | ✅ Synchronized |
 
 ## Validation Summary
 
@@ -73,6 +73,8 @@
 8. **Sequential channels** preserve G=O exactness
 9. **Participation ratio** inversely correlates with G
 10. **Geometric measure** symmetrically correlates with G
+11. **Fidelity to Bell**: G = F/2
+12. **Entanglement of formation**: G = E/2
 
 ## Open Problems
 
