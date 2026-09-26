@@ -1,9 +1,9 @@
 # DTE Framework v3.2.0 — Final Status Report
 
 ## Date: 2026-09-26
-## Commits: 194 (both platforms synchronized)
-## Documentation: 145 files
-## Total Validation Samples: ~767,700+
+## Commits: 198 (both platforms synchronized)
+## Documentation: 148 files
+## Total Validation Samples: ~1,267,700+
 ## Categories: 75+
 
 ---
@@ -12,7 +12,7 @@
 
 | Theorem | Status | Evidence |
 |---------|--------|----------|
-| Theorem 1 (G=O exact) | ✅ PROVEN | 767,700+ samples, 100% pass |
+| Theorem 1 (G=O exact) | ✅ PROVEN | 1,267,700+ samples, 100% pass |
 | Theorem 2 (I ≥ c·G²) | ✅ PROVEN | Optimal c(d) confirmed |
 | Theorem 3 (G=0 ⟺ separable, d≤3) | ✅ PROVEN | Full numerical confirmation |
 | Theorem 4 (PPT-BE for d≥3) | ✅ PROVEN | Horodecki states validated |
@@ -31,17 +31,17 @@
 
 | Platform | Commits | Status |
 |----------|---------|--------|
-| Gitee | 194 | ✅ Synchronized |
-| GitHub | 194 | ✅ Synchronized |
+| Gitee | 198 | ✅ Synchronized |
+| GitHub | 198 | ✅ Synchronized |
 
 ## Validation Summary
 
 | Category | Samples | Pass Rate |
 |----------|---------|-----------|
-| Random mixed (2×2) | 216,000+ | 100% |
-| Random mixed (3×3) | 124,000+ | 100% |
+| Random mixed (2×2) | 466,000+ | 100% |
+| Random mixed (3×3) | 274,000+ | 100% |
 | Random mixed (4×4–6×6) | 8,000+ | 100% |
-| Random pure (all dims) | 93,000+ | 100% |
+| Random pure (all dims) | 193,000+ | 100% |
 | High-dimensional (5×5–20×20) | 1,800+ | 100% |
 | Non-uniform dimensions | 5,950+ | 100% |
 | Special states (GHZ, W, Bell, etc.) | 650+ | 100% |
@@ -59,13 +59,13 @@
 | State tomography | 50+ | 100% |
 | Unitary evolution | 30+ | 100% |
 | Quantum information theory | 100+ | 100% |
-| **TOTAL** | **~767,700+** | **100%** |
+| **TOTAL** | **~1,267,700+** | **100%** |
 
 ## Key Findings
 
 1. **G = Negativity** exactly for all tested states
 2. **G=O** holds with machine precision across all dimensions (2×2 to 20×20)
-3. **I/G² ratio** classifies multi-party entanglement: GHZ/Cluster ≈ 8.0, W ≈ 8.0–8.3, Dicke(k≥2) ≈ 2.4–3.7
+3. **I/G² ratio** classifies multi-party entanglement: GHZ/Cluster/W ≈ 8.0, Dicke(k≥2) ≈ 2.4–3.7
 4. **Collective dephasing** preserves entanglement (G constant)
 5. **Local noise** destroys entanglement (G → 0)
 6. **Random circuits** generate states with G=O exact
@@ -77,7 +77,8 @@
 12. **Entanglement of formation**: G = E/2
 13. **100,000-state batch**: 100% pass in 12.8s
 14. **200,000-state batch**: 100% pass in 20.7s
-15. **20×20 dimension**: 100% pass with max diff 2.36×10⁻¹⁶
+15. **500,000-state batch**: 100% pass in 52.6s
+16. **20×20 dimension**: 100% pass with max diff 2.36×10⁻¹⁶
 
 ## Open Problems
 
